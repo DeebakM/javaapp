@@ -1,21 +1,18 @@
-@Library('My-shared-library') _ 
+@Library('My-shared-library@main') _
 
-pipeline{
-
+pipeline {
   agent any
 
-  stages{
-
-    stage{
-
-      steps('Git Checkout'){
-                
-          gitCheckout(
-            branch: "main",
-            url: "https://github.com/DeebakM/javaapp.git"
-          )
-
+  stages {
+      stage('git checkout') {
+          steps {
+              script{
+                gitCheckout([
+                  url: 'https://github.com/DeebakM/javaapp.git',
+                  branch: 'main'
+                ])
+              }
+          }
       }
-    }
   }
 }
