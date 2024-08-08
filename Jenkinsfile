@@ -14,13 +14,12 @@ pipeline {
               }
           }
       }
-      
-      stage('maven test') {
-        script {
-          echo 'running test',
-          sh 'mvn test'
-        }
-
+      stage('mvn test') {
+          steps {
+              script{
+                sh 'mvn test'
+              }
+          }
       }
   }
 }
