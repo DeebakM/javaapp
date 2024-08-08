@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # javaapp
 =======
 # kubernetes-configmap-reload
@@ -55,3 +56,6 @@ Now we can cleanup by using below commands:
 # springboot_k8s_application
 # mrdevops_java_app
 >>>>>>> bb23301 (initial commit)
+=======
+# javaapp
+>>>>>>> 077f3a88448be5f03018066c4d7430d19722e934
