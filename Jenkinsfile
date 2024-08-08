@@ -1,4 +1,4 @@
-@Library('My-shared-library') _
+@Library('My_shared-library') _ 
 
 pipeline{
 
@@ -6,19 +6,15 @@ pipeline{
 
   stages{
 
-    stage('git checkout'){
+    stage{
 
-      steps{
-          
-          script{
-            gitCheckout(
-              branch: "main"
-              url: "https://github.com/DeebakM/javaapp.git"
-            )
-          }
-        
-       
-        
+      steps('Git Checkout'){
+                
+          gitCheckout(
+            branch: "main",
+            url: "https://github.com/DeebakM/javaapp.git"
+          )
+
       }
     }
   }
